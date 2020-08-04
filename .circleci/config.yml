@@ -8,7 +8,7 @@ jobs:
       - setup_remote_docker:
           version: 17.05.0-ce
       - run : |
-          git clone https://github.com/donwa/oneindex.git
+          git clone https://github.com/kits18/OneindexV2-CN.git
           cd oneindex && export COMMIT_SHA=$(git log -1 --pretty=format:"%H" | awk '{print substr($1,1,8)}') && cd ..
           sed -i 'N;2aCOPY oneindex /var/www/html' Dockerfile
           sed -i 's|git clone.*||' Dockerfile
